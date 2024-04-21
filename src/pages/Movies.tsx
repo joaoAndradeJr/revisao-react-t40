@@ -20,6 +20,7 @@ export default function Movies({ loading }: MoviesProps) {
 
   return (
     <main>
+      <h2>Filmes mais assistidos da semana</h2>
       { movies.map((movie) => (
         <MovieCard key={ movie.id } movie={ movie } />
       )) }

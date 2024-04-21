@@ -1,0 +1,35 @@
+.movie-container {
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  width: 240px;
+}
+
+.movie-cover {
+  box-shadow: #4e5746 0px 0px 10px;
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+  width: 70%;
+}
+
+.rating-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating {
+  color: #f39c12;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 8px;
+}

@@ -1,12 +1,11 @@
 export type MovieType = {
   id: number;
   title: string;
-  subtitle: string;
   storyline: string;
   rating: number;
-  imagePath: string;
+  image: string;
   bookmarked: boolean;
-  genre: string;
+  genre: string[];
 };
 
 export type MovieCardProps = {
