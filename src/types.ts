@@ -12,3 +12,10 @@ export type MovieType = {
 export type MovieCardProps = {
   movie: MovieType;
 };
+
+export type MoviesProps = {
+  loading: {
+    loading: boolean;
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  };
+};

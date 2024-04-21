@@ -26,7 +26,8 @@ export const getMovies = () => (
   })
 );
 
-export const getMovie = (movieId: string) => {
+export const getMovie = (movieId: string | undefined) => {
+  if (!movieId) return Promise.resolve(null);
   const movie = readMovies().find((mov: MovieType) => mov.id === parseInt(movieId, 10));
   return new Promise((resolve) => {
     simulateRequest(movie)(resolve);
