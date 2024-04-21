@@ -8,3 +8,7 @@ export type MovieType = {
   bookmarked: boolean;
   genre: string;
 };
+
+export type MovieCardProps = {
+  movie: MovieType;
+};
