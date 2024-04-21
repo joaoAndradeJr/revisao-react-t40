@@ -1,6 +1,13 @@
+import { Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import Movies from './pages/Movies';
+
 function App() {
   return (
-    <h1>Revisão Turma 40</h1>
+    <Routes>
+      <Route path="/" element={ <Login /> } />
+      <Route path="/movies" element={ <Movies /> } />
+    </Routes>
   );
 }
 
