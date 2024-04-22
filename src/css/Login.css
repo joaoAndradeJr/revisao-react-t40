@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.login-form {
+.form {
   align-items: center;
   background-color: var(--cardBrackground);
   border: 2px solid #243729;
@@ -13,7 +13,7 @@
   box-shadow: var(--cardShadow);
   display: flex;
   flex-direction: column;
-  height: 30vh;
+  max-height: 60vh;
   justify-content: center;
   padding: 20px;
   width: 100%;

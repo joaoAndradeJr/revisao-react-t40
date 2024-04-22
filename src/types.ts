@@ -1,5 +1,5 @@
 export type MovieType = {
-  id?: number;
+  id: number;
   title: string;
   storyline: string;
   rating: number;
@@ -26,6 +26,7 @@ export const initialState = {
 };
 
 export const movieInitialState = {
+  id: -1,
   title: '',
   storyline: '',
   rating: 0,

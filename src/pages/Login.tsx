@@ -29,7 +29,7 @@ export default function Login() {
 
   return (
     <main className="login-page-container">
-      <form className="login-form">
+      <form className="form">
         <Input
           value={ state.name }
           onChange={ handleChange }

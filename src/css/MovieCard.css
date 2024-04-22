@@ -46,5 +46,5 @@
   padding: 6px;
   position: relative;
   text-align: center;
-  width: 20%;
+  max-width: 20%;
 }

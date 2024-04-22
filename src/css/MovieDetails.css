@@ -14,14 +14,14 @@
   flex-direction: column;
   justify-content: center;
   margin: 4% 0;
-  padding: 20px;
-  width: 80%;
+  padding: 2.5% 0;
+  width: 70%;
 }
 
 .movie-details-card img {
   border-radius: 10px;
-  margin: 14% 0 2% 0;
-  width: 70%;
+  max-height: 100%;
+  margin: 2% 0;
 }
 
 .movie-details-card h2 {
@@ -36,6 +36,7 @@
   font-size: 1.2rem;
   margin: 10px 0;
   text-align: center;
+  text-wrap: balance;
   width: 90%;
 }
 
