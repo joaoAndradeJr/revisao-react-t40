@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Input from '../components/Input';
-import { initialState } from '../utils';
+import { initialState } from '../types';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
 import { validEmail } from '../utils/validations';
+import '../css/Login.css';
 
 export default function Login() {
   const [state, setState] = useState(initialState);
@@ -11,7 +12,7 @@ export default function Login() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
-    setState({ ...state, [id.toLocaleLowerCase()]: value });
+    setState({ ...state, [id]: value });
   };
 
   const shouldDisableButton = () => {
@@ -27,28 +28,37 @@ export default function Login() {
   };
 
   return (
-    <form>
-      <Input
-        value={ state.name }
-        onChange={ handleChange }
-        label="Name"
-      />
-      <Input
-        value={ state.email }
-        onChange={ handleChange }
-        label="Email"
-      />
-      <Input
-        value={ state.password }
-        type="password"
-        onChange={ handleChange }
-        label="Password"
-      />
-      <Button
-        value="Entrar"
-        onClick={ handleClick }
-        disabled={ shouldDisableButton() }
-      />
-    </form>
+    <main className="login-page-container">
+      <form className="login-form">
+        <Input
+          value={ state.name }
+          onChange={ handleChange }
+          id="name"
+          placeholder="Nome"
+          className="input-login"
+        />
+        <Input
+          value={ state.email }
+          onChange={ handleChange }
+          id="email"
+          placeholder="Email"
+          className="input-login"
+        />
+        <Input
+          value={ state.password }
+          type="password"
+          onChange={ handleChange }
+          id="password"
+          placeholder="Senha"
+          className="input-login"
+        />
+        <Button
+          value="Entrar"
+          onClick={ handleClick }
+          disabled={ shouldDisableButton() }
+          className="login-button"
+        />
+      </form>
+    </main>
   );
 }

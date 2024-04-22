@@ -1,15 +1,16 @@
-import { InputProps } from '../utils';
+import { InputProps } from '../types';
 
-export default function Input({ type = 'text', value, onChange, label }: InputProps) {
+export default function Input({
+  type = 'text', value, onChange, id, placeholder = '', className = '',
+}: InputProps) {
   return (
-    <label htmlFor={ label }>
-      { label }
     <input
       type={ type }
       value={ value }
       onChange={ onChange }
-      id={ label }
-      />
-    </label>
+      id={ id }
+      placeholder={ placeholder }
+      className={ className }
+    />
   );
 }

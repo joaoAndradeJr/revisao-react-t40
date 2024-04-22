@@ -18,3 +18,26 @@ export type MoviesProps = {
     setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   };
 };
+
+export const initialState = {
+  name: '',
+  email: '',
+  password: '',
+};
+
+export type ButtonProps = {
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
+  disabled?: boolean;
+  value: string;
+  className?: string;
+};
+
+export type InputProps = {
+  type?: string;
+  value: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  id: string;
+  placeholder?: string;
+  className?: string;
+};
