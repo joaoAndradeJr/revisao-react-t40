@@ -69,8 +69,9 @@ export default function EditMovies({ loading }: LoadingProps) {
             className="edit-movie-input"
           />
           <Input
-            id="release"
-            placeholder="Lançamento"
+            id="rating"
+            placeholder="Qualificação"
+            type="number"
             value={ String(state.rating) }
             onChange={ handleChange }
             className="edit-movie-input"
