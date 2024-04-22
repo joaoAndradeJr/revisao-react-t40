@@ -1,0 +1,72 @@
+.movie-details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-details-card {
+  align-items: center;
+  background-color: var(--cardBrackground);
+  border-radius: 10px;
+  box-shadow: var(--cardShadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4% 0;
+  padding: 20px;
+  width: 80%;
+}
+
+.movie-details-card img {
+  border-radius: 10px;
+  margin: 14% 0 2% 0;
+  width: 70%;
+}
+
+.movie-details-card h2 {
+  color: var(--titleColor);
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.movie-details-card p {
+  color: var(--textColor);
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: center;
+  width: 90%;
+}
+
+.tags-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.genre {
+  background-color: var(--genreBackground);
+  border-radius: 8px;
+  box-shadow: var(--cardShadow);
+  color: var(--textColor);
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0 8px;
+  padding: 6px;
+}
+
+.button {
+  background-color: var(--buttonBackground);
+  border: none;
+  border-radius: 8px;
+  color: var(--textColor);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  left: 90%;
+  margin: 0 10px;
+  padding: 8px;
+  position: relative;
+  top: 20px;
+}

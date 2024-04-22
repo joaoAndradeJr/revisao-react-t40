@@ -5,7 +5,7 @@
 }
 
 .movie-cover {
-  border: 1px solid #d2d1d6;
+  box-shadow: var(--cardShadow);
   border-radius: 5px;
   height: 340px;
   object-fit: cover;
@@ -21,9 +21,10 @@
 }
 
 .movie-title {
-  background-color: rgba(31, 116, 0, 0.967);
+  background-color: var(--background);
   border-radius: 8px;
-  color: #d1fb96;
+  box-shadow: var(--cardShadow);
+  color: var(--titleColor);
   font-size: large;
   padding: 6px;
   position: relative;
@@ -34,10 +35,11 @@
 }
 
 .rating {
-  background-color: rgba(234, 187, 1, 0.967);
+  background-color: var(--tagBackground);
   border-radius: 8px;
   bottom: 25%;
-  color: #403f3d;
+  box-shadow: var(--cardShadow);
+  color: var(--tagColor);
   font-size: 1.2rem;
   font-weight: bold;
   margin-left: 8px;

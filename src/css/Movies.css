@@ -6,7 +6,7 @@
 }
 
 .title {
-  color: #d1fb96;
+  color: var(--titleColor);
   font-size: 2rem;
   margin: 20px 0;
   text-align: center;

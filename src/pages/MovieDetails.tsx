@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { MovieType, MoviesProps } from '../types';
+import { useNavigate, useParams } from 'react-router-dom';
+import { LoadingProps, MovieType } from '../types';
 import { getMovie } from '../services/movieAPI';
+import Loading from '../components/Loading';
+import '../css/MovieDetails.css';
+import Button from '../components/Button';
 
-export default function MovieDetails({ loading }: MoviesProps) {
+export default function MovieDetails({ loading }: LoadingProps) {
   const [movie, setMovie] = useState<MovieType | null>(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -17,22 +21,34 @@ export default function MovieDetails({ loading }: MoviesProps) {
     fetchMovieDetails();
   }, [id]);
 
-  if (loading.loading) return <h1>Loading...</h1>;
+  if (loading.loading) return <Loading />;
 
   return (
-    <main>
+    <main className="movie-details">
       {movie && (
-        <div>
+        <section className="movie-details-card">
           <img src={ movie.image } alt={ movie.title } />
           <h2>{ movie.title }</h2>
           <p>{ movie.storyline }</p>
-          <span>{ movie.rating }</span>
-          <div>
+          <span className="rating">{ movie.rating }</span>
+          <div className="tags-container">
             { movie.genre.map((genre) => (
-              <span key={ genre }>{ genre }</span>
+              <span className="genre" key={ genre }>{ genre }</span>
             )) }
           </div>
-        </div>
+          <div>
+            <Button
+              className="button"
+              onClick={ () => navigate(`/movie/edit/${id}`) }
+              value="Editar"
+            />
+            <Button
+              className="button"
+              onClick={ () => navigate('/movies') }
+              value="Voltar"
+            />
+          </div>
+        </section>
       )}
     </main>
   );

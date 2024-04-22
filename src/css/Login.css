@@ -2,15 +2,15 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
 }
 
 .login-form {
   align-items: center;
+  background-color: var(--cardBrackground);
   border: 2px solid #243729;
   border-radius: 5px;
-  box-shadow: #0c2c15 0 0 10px;
+  box-shadow: var(--cardShadow);
   display: flex;
   flex-direction: column;
   height: 30vh;
@@ -29,19 +29,19 @@
 }
 
 .login-button {
-  background-color: #007bff;
+  background-color: var(--buttonBackground);
   border: none;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
-  font-size: large;
+  font-size: larger;
   height: 40px;
   margin-top: 10px;
   width: 90%;
 }
 
 .login-button:disabled {
-  background-color: #dfdede;
-  border: 2px solid #007bff;
+  background-color: var(--disabledButtonBackground);
+  border: 3px solid #11c304c0;
   cursor: not-allowed;
 }

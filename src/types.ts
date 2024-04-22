@@ -1,5 +1,5 @@
 export type MovieType = {
-  id: number;
+  id?: number;
   title: string;
   storyline: string;
   rating: number;
@@ -25,6 +25,15 @@ export const initialState = {
   password: '',
 };
 
+export const movieInitialState = {
+  title: '',
+  storyline: '',
+  rating: 0,
+  image: '',
+  bookmarked: false,
+  genre: [],
+};
+
 export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
@@ -40,4 +49,11 @@ export type InputProps = {
   id: string;
   placeholder?: string;
   className?: string;
+};
+
+export type LoadingProps = {
+  loading: {
+    loading: boolean;
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  };
 };

@@ -22,6 +22,6 @@ Esta aplicação tem carater de revisão de conteúdo e pode não estar finaliza
 
 5. Na rota `/movie/:id` você deverá receber o id do filme pelo parâmetro da rota e buscar seus detalhes na "api" `movieAPI`;
 
-6. Crie uma página de adição de filmes que deverá ser renderizada na rota `/movie/add`. Essa página deverá conter um formulário para o cadastro das informações do filme. O botão de cadastro do filme deverá estar desabilitado até que todas as informações tenham sido preenchidas.
+6. Crie uma página de edição de filmes que deverá ser renderizada na rota `/movie/edit/:id`. Essa página deverá conter um formulário que deverá vir preenchido com as informações do filme a ser editado. Essas informações deveram ser recuperadas da "api" `movieAPI`. Essa tela também deverá ter um botão para excluir o filme que está sendo editado.
 
-7. Crie uma página de edição de filmes que deverá ser renderizada na rota `/movie/edit/:id`. Essa página deverá conter um formulário que deverá vir preenchido com as informações do filme a ser editado. Essas informações deveram ser recuperadas da "api" `movieAPI`. Essa tela também deverá ter um botão para excluir o filme que está sendo editado.
+7. Crie uma página de adição de filmes que deverá ser renderizada na rota `/movie/add`. Essa página deverá conter um formulário para o cadastro das informações do filme. O botão de cadastro do filme deverá estar desabilitado até que todas as informações tenham sido preenchidas.

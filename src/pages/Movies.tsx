@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { MovieType, MoviesProps } from '../types';
+import { LoadingProps, MovieType } from '../types';
 import { getMovies } from '../services/movieAPI';
 import MovieCard from '../components/MovieCard';
 import '../css/Movies.css';
 import Loading from '../components/Loading';
 
-export default function Movies({ loading }: MoviesProps) {
+export default function Movies({ loading }: LoadingProps) {
   const [movies, setMovies] = useState<MovieType[]>([]);
 
   useEffect(() => {
