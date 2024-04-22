@@ -23,8 +23,8 @@
   cursor: pointer;
   font-size: larger;
   height: 40px;
-  margin-top: 10px;
-  width: 90%;
+  margin-top: 2%;
+  width: 100%;
 }
 
 .edit-button:disabled {

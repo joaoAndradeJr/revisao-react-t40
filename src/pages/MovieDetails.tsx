@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { LoadingProps, MovieType } from '../types';
-import { getMovie } from '../services/movieAPI';
+import { deleteMovie, getMovie } from '../services/movieAPI';
 import Loading from '../components/Loading';
 import '../css/MovieDetails.css';
 import Button from '../components/Button';
@@ -20,6 +20,13 @@ export default function MovieDetails({ loading }: LoadingProps) {
     }
     fetchMovieDetails();
   }, [id]);
+
+  const handleDelete = async () => {
+    loading.setLoading(true);
+    await deleteMovie(Number(id));
+    loading.setLoading(false);
+    navigate('/movies');
+  };
 
   if (loading.loading) return <Loading />;
 
@@ -46,6 +53,11 @@ export default function MovieDetails({ loading }: LoadingProps) {
               className="button"
               onClick={ () => navigate('/movies') }
               value="Voltar"
+            />
+            <Button
+              className="button"
+              onClick={ handleDelete }
+              value="Excluir filme"
             />
           </div>
         </section>
