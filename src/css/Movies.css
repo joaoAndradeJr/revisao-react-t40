@@ -1,0 +1,15 @@
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.title {
+  color: #d1fb96;
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}

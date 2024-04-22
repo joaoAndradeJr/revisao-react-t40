@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  align-items: center;
+  background-color: rgba(31, 116, 0, 0.967);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3%;
+}
+
+a {
+  color: #917004;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #917004;
+  text-decoration: none;
+}
